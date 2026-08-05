@@ -1,0 +1,47 @@
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, f1_score
+
+
+class BinaryClassifier:
+    """
+    Binary classifier for AWF-1
+    (Benign vs Malignant)
+    """
+
+    def __init__(self):
+        self.model = RandomForestClassifier(
+            n_estimators=200,
+            max_depth=10,
+            random_state=42,
+            class_weight="balanced"
+        )
+
+    def train(self, X_train, y_train):
+        """
+        Train binary classifier
+        """
+        self.model.fit(X_train, y_train)
+
+    def predict(self, X_test):
+        """
+        Predict class labels
+        """
+        return self.model.predict(X_test)
+
+    def evaluate(self, X_test, y_true):
+        """
+        Evaluate performance
+        """
+        y_pred = self.predict(X_test)
+
+        return {
+            "accuracy": accuracy_score(y_true, y_pred),
+            "f1_score": f1_score(y_true, y_pred)
+        }
+
+    def predict_with_confidence(self, X):
+        """
+        Returns predictions with probabilities
+        """
+        return self.model.predict_proba(X)
