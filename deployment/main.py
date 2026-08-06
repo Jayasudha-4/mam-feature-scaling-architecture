@@ -4,7 +4,7 @@ from config.proposed_model_config import PROPOSED_MODEL_CONFIG
 
 def main():
     graph = run_awf1("CBIS-DDSM", PROPOSED_MODEL_CONFIG)
-    graph = run_awf2(graph, ["MIAS", "VinDr-Mammo"], PROPOSED_MODEL_CONFIG)
+    graph = run_awf2(graph, ["VinDr-Mammo"], PROPOSED_MODEL_CONFIG)
 
 if __name__ == "__main__":
     main()

@@ -9,7 +9,7 @@ EXPERIMENT_CONFIG = {
 
     "datasets": {
         "AWF_1": ["CBIS-DDSM"],
-        "AWF_2": ["CBIS-DDSM", "MIAS", "VinDr-Mammo"]
+        "AWF_2": ["CBIS-DDSM", "VinDr-Mammo"]
     },
 
     "kpi_metrics": {
