@@ -1,10 +1,7 @@
 # MAM Deployment
 
-Modular Adaptive Mining (MAM) base implementation: Data Lakehouse (DLH)
--> Central Graph (CG) -> Analytical Workflow 1 (binary classification, CG -> CG')
--> Analytical Workflow 2 (BI-RADS multi-class classification, CG' -> Final Central
-Graph FG), with min-cut based subgraph mining, incremental graph evolution, and
-computation (KPI) evaluation.
+Modular Adaptive Morphing (MAM) base implementation: 
+Data Lakehouse (DLH) -> Central Graph (CG) -> Analytical Workflow 1 (binary classification, CG -> CG') -> Analytical Workflow 2 (BI-RADS multi-class classification, CG' -> Final Central Graph FG), with min-cut based subgraph mining, incremental graph evolution, and computation (KPI) evaluation.
 
 ## Folder structure
 
