@@ -44,15 +44,3 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-
-## Results 
-
-| Workflow | Task                     | Accuracy |
-|----------|--------------------------|----------|
-| AWF-1    | Binary (Benign/Malignant)| 0.97     |
-| AWF-2    | BI-RADS (multi-class)    | 0.95     |
-
-Computation KPIs (Read/Write Throughput, Node Transition, Query Latency) are
-measured live on the running Central Graph across three simulated
-environments (E1: 8vCores/32GB, E2: 16vCores/64GB, E3: 32vCores/128GB) and
-printed alongside the paper's reference results in `main.py`'s output.
